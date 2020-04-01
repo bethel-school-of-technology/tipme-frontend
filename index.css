@@ -1,11 +1,16 @@
 h1 {
-    color: orange;
+    color: yellow;
     font-weight: lighter;
 }
 
 body {
-    background: gray;
+    background: green;
 }
+
+div {
+    color: blue
+}
+
 
 
 
