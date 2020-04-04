@@ -35,8 +35,26 @@
             <input/>
         </div> <br>
         <button type="reset">Reset</button>
+
+
          
-         
+        {{!-- Return for Add restaurants  --}}
+        
+        return (
+            <div>
+              <ul>
+                {list.map(item => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+        
+              <form onSubmit={handleSubmit}>
+                <input type="text" value={value} onChange={handleChange} />
+                <button type="submit">Add Item</button>
+              </form>
+            </div>
+          );
+        };
     </body>
 </html>
 
