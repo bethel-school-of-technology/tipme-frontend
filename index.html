@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 
+
 <head>
     <title>Welcome!</title>
     <link rel="stylesheet" href="index.css">
-</head>
+
 
 <body>
 
@@ -16,6 +17,21 @@
             <a href="#">neutral</a>
             <a href="#">satisfied</a>
             <a href="#">extremely satisfied</a>
+</head>
+      
+    
+        <h1><em>Tip Me!<em></h1>
+        <div>
+            Bill Amount $  
+            <input/>          
+        </div>  
+        <div>
+            Tip Percent:
+            <input/>%
+        </div>
+        <div>
+            Divided By # of
+            <input/>people
 
         </div>
     </div>
@@ -40,6 +56,7 @@
 
     <div>
         <button type="calculate">Calculate</button>
+
     </div> <br>
     <div>
         Tip Total <br>
@@ -61,3 +78,44 @@
 </body>
 
 </html>
+=======
+        </div> <br>
+        <div>
+            Tip Total:
+            <input/>
+        </div> 
+        <div>
+           Total Amount:
+            <input/>
+        </div> 
+        <div>
+           Each Person:
+            <input/>
+        </div> <br>
+        <button type="reset">Reset</button>
+
+
+         
+        {{!-- Return for Add restaurants  --}}
+        
+        return (
+            <div>
+              <ul>
+                {list.map(item => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+        
+              <form onSubmit={handleSubmit}>
+                <input type="text" value={value} onChange={handleChange} />
+                <button type="submit">Add Item</button>
+              </form>
+            </div>
+          );
+        };
+    </body>
+</html>
+
+
+
+

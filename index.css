@@ -7,6 +7,7 @@ h1 {
 }
 
 body {
+
     background: rgb(96, 173, 96);
 }
 
@@ -22,6 +23,7 @@ div {
     font-size: small;
     border: none;
     float: right;
+
 }
 .dropdown {
     position: relative;
@@ -47,6 +49,7 @@ div {
 .dropdown-content a:hover {background-color: lightgrey;}
 
 .dropdown:hover .dropdown-content {display: block;}
+
 
 .dropdown:hover .dropbtn {background-color: lightyellow;}
 
