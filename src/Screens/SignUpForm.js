@@ -34,6 +34,9 @@ export default class Form extends React.Component {
 
   render() {
     return (
+      
+      <h1>"Tipme" Sign Up Form</h1>
+      <h3>Please Register to begin using Tipme</h3>
       <form>
          <div>First Name: </div> 
         <input
