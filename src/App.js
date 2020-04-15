@@ -1,5 +1,6 @@
 import React from 'react';
 
+import SignUpForm from './Screens';
 import ListRestaurants from './components/restaurants';
 
 app.post('/upload', (req, res, next) => {
