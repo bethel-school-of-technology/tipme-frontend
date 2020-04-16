@@ -1,11 +1,15 @@
-import React from "react";
+import React, { Fragment } from "react";
+import Axios from 'axios';
+import { withRouter } from 'react-router-dom';
 
-export default class Form extends React.Component {
+export default class SignUp extends React.Component {
   state = {
     firstName: "",
     lastName: "",
     email: "",
-    phone: ""
+    phone: "",
+    username:"",
+    password:""
   };
 
   change = e => {
@@ -22,19 +26,23 @@ export default class Form extends React.Component {
       firstName: "",
       lastName: "",
       email: "",
-      phone: ""
+      phone: "",
+      username:"",
+      password:""
     });
     this.props.onChange({
         firstName: "",
         lastName: "",
         email: "",
-        phone: ""
+        phone: "",
+        username:"",
+        password:""
       });
   };
 
   render() {
     return (
-      
+      <Fragment>
       <h1>"Tipme" Sign Up Form</h1>
       <h3>Please Register to begin using Tipme</h3>
       <form>
@@ -71,8 +79,18 @@ export default class Form extends React.Component {
           onChange={e => this.change(e)}
         />
         <br />
+        <div>Create a Username:</div>
+        <input
+          name="username"
+          type="Username"
+          placeholder="username"
+          value={this.state.username}
+          onChange={e => this.change(e)}
+        />
+        <br />
+
         <button onClick={e => this.onSubmit(e)}>Submit</button>
-      </form>
+      </form></Fragment>
     );
   }
 }
