@@ -1,4 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+import logo from './logo.svg';
+import './App.css';
+import axios from 'axios';
+>>>>>>> axios
 
 import SignUpForm from './Screens';
 import ListRestaurants from './components/restaurants';
