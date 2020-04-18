@@ -1,19 +1,12 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import logo from './logo.svg';
 import './App.css';
-import axios from 'axios';
->>>>>>> axios
-
-import SignUpForm from './Screens';
-import ListRestaurants from './components/restaurants';
+import Calculator from './components/calculator';
 
 const App = () => (
   <div>
 
-    <h4>Your TipMe Locations </h4>
-     <ListRestaurants />
+    <h4> TipMe Calculator </h4>
+     <Calculator />
 
   </div>
 );
