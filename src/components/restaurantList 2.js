@@ -7,7 +7,7 @@ export default class restaurantList extends React.Component {
     };
 
     componentDidMount() {
-        axios.get('http://localhost:3000/tipme')
+        axios.get('http://localhost:3001/tipme')
         this.setState({ restaurants: res.data });
     }
 
