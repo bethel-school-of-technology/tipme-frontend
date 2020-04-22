@@ -43,6 +43,7 @@ export default class SignUp extends React.Component {
   render() {
     return (
       <Fragment>
+        <form action="/" method="POST">
       <h1>"Tipme" Sign Up Form</h1>
       <h3>Please Register to begin using Tipme</h3>
       <form>
@@ -90,7 +91,9 @@ export default class SignUp extends React.Component {
         <br />
 
         <button onClick={e => this.onSubmit(e)}>Submit</button>
-      </form></Fragment>
+      </form>
+      </form>
+      </Fragment>
     );
   }
 }
