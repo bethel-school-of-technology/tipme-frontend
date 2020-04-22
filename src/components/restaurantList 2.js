@@ -7,12 +7,12 @@ export default class restaurantList extends React.Component {
     };
 
     componentDidMount() {
-        axios.get('http://localhost:3001/tipme')
+        axios.get('http://localhost:3000/tipme')
         this.setState({ restaurants: res.data });
     }
 
     render() {
-        retun (
+        return (
            <ul>
                {this.state.restaurants.map(restaurant => <li>{restaurant.name}</li>)}
            </ul>

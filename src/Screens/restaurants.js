@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import Navbar from '../components/navbar'
+
+import '../assets/css/restaurant.css'
 
 const restaurants = [];
 
@@ -21,8 +24,9 @@ const ListRestaurants = () => {
   };
 
   return (
-    <div>
-
+    <Fragment>
+      <Navbar />
+      <div className="resContainer">
       <form onSubmit={handleSubmit}>
         <input type="text" value={value} onChange={handleChange} />
         <button type="submit">Add Restaurants</button>
@@ -32,9 +36,9 @@ const ListRestaurants = () => {
       {list.map(item => (
         <li key={item}>{item}</li>
       ))}
-    </ul>
-    
-    </div>
+        </ul>
+        </div>
+    </Fragment>
     
   );
 };
