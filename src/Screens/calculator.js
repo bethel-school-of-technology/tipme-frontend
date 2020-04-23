@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import NavBar from '../components/navbar'
+
+import '../assets/css/Calculator.css'
 
 
-class Calculator extends React.Component{
-    constructor(props){
-    super(props);
 
+const Calculator = () => {
     function calculateTip(){
         //alert("Ready");
         resetTip();
+    }
     
         var checkAmount = document.getElementById("amount").value;
         var tipPercentage = document.getElementById("tip").value;
@@ -51,19 +53,19 @@ class Calculator extends React.Component{
             document.getElementById("billTotal").innerHTML = singleTotal.toFixed(2);
         }
     }
-} 
-    resetTip();
-    
-    //hide single and multiple blocks
-    function resetTip() {
+
+   //hide single and multiple blocks
+     function resetTip() {
         document.getElementById("single").style.display="none";
         document.getElementById("multiple").style.display="none";
     }
     
-    render(); {
+    
     return (
-    <div class="container">
-        <div class="header">
+        <Fragment>
+            <NavBar />
+    <div className="container">
+        <div className="header">
         <h1>Tip Me!</h1>
         </div>
     <form>
@@ -96,7 +98,7 @@ class Calculator extends React.Component{
             <option value="10">10</option>
         </select>
     </form><br />
-    <button class="calc" onClick="calculateTip()">Calculate</button>
+    <button className="calc" onClick={calculateTip}>Calculate</button>
     <div id="single">
         <p>Tip: $<span id="tipAmount"></span></p>
         <p>Total: $<span id="billTotal"></span></p>
@@ -108,8 +110,10 @@ class Calculator extends React.Component{
                 <p>Bill Total: $<span id="billTotalMultiple"></span></p>
     </div>
 </div>
+</Fragment>
+
 )
-}
+
 
 
 

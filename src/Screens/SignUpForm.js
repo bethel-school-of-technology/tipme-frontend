@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import Navbar from '../components/navbar'
+import Axios from 'axios';
 
 import '../assets/css/SignUpForm.css'
 
