@@ -1,23 +1,11 @@
-import React, {Component} from 'react';
-import './App.css';
-import Calculator from './screens/calculator';
-import axios from 'axios';
-import SignUpForm from './Screens';
-import Login from './Screens';
-import ReactDOM from 'react-dom';
-import Axios from 'axios';
-import ReactScript from 'react-script';
+import React from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
 
+import Routes from './components/routes'
 
-
- const App = () => (
-  <div>
-
-   <h4> TipMe Calculator </h4>
-   <Login />
-     <Calculator />
-
-  </div> 
- ); 
-
+const App = () => (
+  <Router>
+    <Routes />
+  </Router>
+)
 export default App;
