@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import NavBar from '../components/navbar'
 
-import '../assets/css/Calculator.css'
+// import '../assets/css/Calculator.css'
 
 
 
@@ -9,7 +9,7 @@ const Calculator = () => {
     function calculateTip(){
         //alert("Ready");
         resetTip();
-    }
+    
     
         var checkAmount = document.getElementById("amount").value;
         var tipPercentage = document.getElementById("tip").value;
@@ -59,6 +59,7 @@ const Calculator = () => {
         document.getElementById("single").style.display="none";
         document.getElementById("multiple").style.display="none";
     }
+
     
     
     return (
@@ -114,6 +115,7 @@ const Calculator = () => {
 
 )
 
+    }
 
 
 
