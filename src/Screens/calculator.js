@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import NavBar from '../components/navbar'
+import Navbar from '../components/navbar'
 
 // import '../assets/css/Calculator.css'
 
@@ -56,8 +56,9 @@ const Calculator = () => {
 
     return (
         <Fragment>
-
-    <div className="container">
+            <Navbar />
+            
+        <div className="container">
         <div className="header">
         <h1>Tip Me!</h1>
         </div>
