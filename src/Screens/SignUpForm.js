@@ -10,8 +10,8 @@ class SignUpForm extends React.Component {
           super();
   
           this.state = {
-            firstName: "",
-            lastName: "",
+            firstname: "",
+            lastname: "",
             email: "",
             phone: "",
             username: "",
@@ -32,6 +32,26 @@ handleChange(e) {
   });
 }
 
+submit(event) {
+  event.preventDefault();
+  console.log(this.state);
+  const user = { firstname: this.state.firstname, lastname: this.state.lastname,
+  email: this.state.email, phone: this.state.email, username: this.state.username,
+password: this.state.password };
+Axios.post('http://localhost:3001/signupform', user)
+.then(response => {
+  
+  console.log(response);
+  if(response.data.status === 200) {
+    localStorage.setItem("name", response.data.user.username)
+    this.props.history.push("./profule");
+  } else {
+    if (response.data.status === 400 || 401) {
+      window.alert(response.data.message);
+    }
+  }
+})
+}
 
 handleSubmit(e) {
   e.preventDefault();
@@ -53,9 +73,9 @@ handleSubmit(e) {
                    
           <label>First Name:</label>
           <input
-            name="firstName"
-            placeholder="First name"
-            value={this.state.firstName}
+            name="First Name"
+            placeholder="First Name"
+            value={this.state.firstname}
             onChange={this.handleChange}
           />
           <br />
@@ -63,7 +83,7 @@ handleSubmit(e) {
           <input
             name="lastName"
             placeholder="Last name"
-            value={this.state.lastName}
+            value={this.state.lastname}
             onChange={this.handleChange}
           />
           <br />
@@ -107,7 +127,7 @@ handleSubmit(e) {
             name="password1" 
             type="Password"
             placeholder="Password1"
-            value={this.state.password1}
+            value={this.state.password}
             onChange={this.handleChange}/>
           <br />
           <label>
