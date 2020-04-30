@@ -27,16 +27,16 @@ function calculateTip(){
        if (numberOfPeople > 1) {
            let check = (checkAmount / numberOfPeople);
            let tip = (totalTip / numberOfPeople);
-           setTotalTipMultiple(tip);//document.getElementById("totalTipMultiple").innerHTML = tip.toFixed(2);
+           setTotalTipMultiple(tip.toFixed(2));
            let amountEach = parseFloat(check) + parseFloat(tip);
-           setTotalAmountEach(amountEach);//document.getElementById("totalAmountEach").innerHTML = amountEach.toFixed(2);
+           setTotalAmountEach(amountEach.toFixed(2));
            let multipleTotal = parseFloat(checkAmount) + parseFloat(totalTip);
-           setBillTotalMultiple(multipleTotal);//document.getElementById("billTotalMultiple").innerHTML = multipleTotal.toFixed(2);
+           setBillTotalMultiple(multipleTotal.toFixed(2));
 
        } else {
            let singleTotal = (parseFloat(checkAmount) + parseFloat(totalTip));
-           setTipAmount(totalTip);//document.getElementById("tipAmount").innerHTML = totalTip;
-           setBillTotal(singleTotal);//document.getElementById("billTotal").innerHTML = singleTotal.toFixed(2);
+           setTipAmount(totalTip);
+           setBillTotal(singleTotal.toFixed(2));
        }
    }
    return (
