@@ -1,17 +1,18 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from "react";
 import Navbar from '../components/navbar'
-import Axios from 'axios';
 
-// import '../assets/css/SignUpForm.css'
+import '../assets/css/SignUpForm.css'
 
+//export default class SignUp extends React.Component {
+  //state = {
 
 class SignUpForm extends React.Component {
       constructor() {
           super();
   
           this.state = {
-            firstname: "",
-            lastname: "",
+            firstName: "",
+            lastName: "",
             email: "",
             phone: "",
             username: "",
@@ -32,26 +33,13 @@ handleChange(e) {
   });
 }
 
-submit(event) {
-  event.preventDefault();
-  console.log(this.state);
-  const user = { firstname: this.state.firstname, lastname: this.state.lastname,
-  email: this.state.email, phone: this.state.email, username: this.state.username,
-password: this.state.password };
-Axios.post('http://localhost:3001/signupform', user)
-.then(response => {
-  
-  console.log(response);
-  if(response.data.status === 200) {
-    localStorage.setItem("name", response.data.user.username)
-    this.props.history.push("./profule");
-  } else {
-    if (response.data.status === 400 || 401) {
-      window.alert(response.data.message);
-    }
-  }
-})
-}
+
+//  change = e => {
+//    this.props.onChange({ [e.target.name]: e.target.value });
+//    this.setState({
+//      [e.target.name]: e.target.value
+//    });
+//  };
 
 handleSubmit(e) {
   e.preventDefault();
@@ -63,7 +51,6 @@ handleSubmit(e) {
   render() {
     return (
       <Fragment>
-       
         <Navbar />
         <form onSubmit={this.handleSubmit} className="container">
         <header><h1>Tip Me!</h1></header>
@@ -73,9 +60,9 @@ handleSubmit(e) {
                    
           <label>First Name:</label>
           <input
-            name="First Name"
-            placeholder="First Name"
-            value={this.state.firstname}
+            name="firstName"
+            placeholder="First name"
+            value={this.state.firstName}
             onChange={this.handleChange}
           />
           <br />
@@ -83,7 +70,7 @@ handleSubmit(e) {
           <input
             name="lastName"
             placeholder="Last name"
-            value={this.state.lastname}
+            value={this.state.lastName}
             onChange={this.handleChange}
           />
           <br />
@@ -127,7 +114,7 @@ handleSubmit(e) {
             name="password1" 
             type="Password"
             placeholder="Password1"
-            value={this.state.password}
+            value={this.state.password1}
             onChange={this.handleChange}/>
           <br />
           <label>
@@ -136,7 +123,6 @@ handleSubmit(e) {
 
           <button onClick={this.handleSubmit}>Submit</button>
         </form>
-
       </Fragment>
     );
   }
