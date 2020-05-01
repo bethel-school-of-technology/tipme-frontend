@@ -1,9 +1,10 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from "react";
 import Navbar from '../components/navbar'
-import Axios from 'axios';
 
-// import '../assets/css/SignUpForm.css'
+import '../assets/css/SignUpForm.css'
 
+//export default class SignUp extends React.Component {
+  //state = {
 
 class SignUpForm extends React.Component {
       constructor() {
@@ -33,6 +34,13 @@ handleChange(e) {
 }
 
 
+//  change = e => {
+//    this.props.onChange({ [e.target.name]: e.target.value });
+//    this.setState({
+//      [e.target.name]: e.target.value
+//    });
+//  };
+
 handleSubmit(e) {
   e.preventDefault();
 
@@ -43,7 +51,6 @@ handleSubmit(e) {
   render() {
     return (
       <Fragment>
-       
         <Navbar />
         <form onSubmit={this.handleSubmit} className="container">
         <header><h1>Tip Me!</h1></header>
@@ -116,7 +123,6 @@ handleSubmit(e) {
 
           <button onClick={this.handleSubmit}>Submit</button>
         </form>
-
       </Fragment>
     );
   }

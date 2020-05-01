@@ -2,7 +2,7 @@ import React, {Fragment} from 'react';
 import Axios from 'axios';
 import Navbar from '../components/navbar'
 
-// import '../assets/css/login.css'
+import '../assets/css/login.css'
 
 class Login extends React.Component {
   constructor(props) {
@@ -61,7 +61,5 @@ class Login extends React.Component {
   }
 
 }
-
-
 
 export default Login
