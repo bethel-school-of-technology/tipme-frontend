@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import Navbar from '../components/navbar'
-// import '../assets/css/Calculator.css'
+//import '..assest/css/Calculator.css'
+
 const Calculator = () => {
    const [checkAmount, setCheckAmount] = useState("")
    const [tipAmount, setTipAmount] = useState("")
@@ -9,6 +10,7 @@ const Calculator = () => {
    const [totalTipMultiple, setTotalTipMultiple] = useState("")
    const [billTotalMultiple, setBillTotalMultiple] = useState("")
    const [totalAmountEach, setTotalAmountEach] = useState("")
+   const [tipPercentage, setTipPercentage] = useState("")
    
 function calculateTip(){
        //alert("Ready");
@@ -50,7 +52,7 @@ function calculateTip(){
        <p>Check Total:</p>
        <input type="number" id="amount" placeholder="Check Amount" maxLength="9" onChange={(e) => setCheckAmount(parseFloat(e.target.value))}/>
        <p>Tip Percentage:</p>
-       <select id="tip">
+       <select id="tip" onChange={(e) => setCheckAmount(parseFloat(e.target.value))} >
            <option value="0.1">10%</option>
            <option value="0.15">15%</option>
            <option value="0.2">20%</option>
