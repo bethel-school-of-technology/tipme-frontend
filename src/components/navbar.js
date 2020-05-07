@@ -6,7 +6,7 @@ import '../look/css/navbar.css';
 
  const NavBar = () => (
      <nav>
-       <h2>Tip Me!</h2>
+       <h2>Tip M!</h2>
        <ul className="nav-links">
          <Link to="/">Home</Link>
          <Link to="/restaurant">Restaurants</Link>
