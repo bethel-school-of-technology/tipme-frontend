@@ -1,5 +1,6 @@
 import React from 'react';
 import Axios from 'axios';
+import '../look/css/resturants.css';
 
 
 const restaurants = [];
