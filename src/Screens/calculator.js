@@ -77,7 +77,7 @@ function calculateTip(){
        </select>
    </form><br />
    <button className="calc" onClick={calculateTip}>Calculate</button>
-   
+      
    {(numberOfPeople == 1) ? (<div id="single">
        <p>Tip: $<span id="tipAmount">{tipAmount}</span></p>
    <p>Total: $<span id="billTotal">{billTotal}</span></p>
