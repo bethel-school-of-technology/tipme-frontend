@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react';
 import Navbar from '../components/navbar'
 import Axios from 'axios';
+import '../look/css/signUpForm.css';
 
-// import '../assets/css/SignUpForm.css'
+
 
 
 class SignUpForm extends React.Component {

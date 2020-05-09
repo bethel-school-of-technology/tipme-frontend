@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
 import { Route, Switch } from "react-router-dom";
 
-import Calculator from "../screens/calculator";
-import Restaurant from "../screens/restaurants";
-import Login from "../screens/login";
-import SignUpForm from "../screens/SignUpForm";
+import Calculator from "../Screens/calculator";
+import Restaurant from "../Screens/restaurants";
+import Login from "../Screens/login";
+import SignUpForm from "../Screens/SignUpForm";
 
 
 const Routes = () => (
