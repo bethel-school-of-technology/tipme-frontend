@@ -9,7 +9,7 @@ import '../look/css/navbar.css';
        <h2>Tip M!</h2>
        <ul className="nav-links">
          <Link to="/">Home</Link>
-         <Link to="/restaurant">Restaurants</Link>
+         <Link to="/restaurant">Restaurant</Link>
          <Link to="/signup">Signup</Link>
          <Link to="/login">Login</Link>
        </ul>
