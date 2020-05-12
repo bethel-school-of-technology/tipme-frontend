@@ -1,4 +1,4 @@
-.container {
+.container1 {
     margin: auto;
     margin-top: 25px;
     margin-bottom: 25px;
@@ -6,4 +6,10 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    width: 30%;
+    padding-bottom: 10px;
+    background: linear-gradient(#308695, #56c59750 );
+    border-radius: 5px;
+    box-shadow: 0 5px 10px 0 black; 
+    
 }

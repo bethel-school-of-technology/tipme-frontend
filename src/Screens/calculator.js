@@ -43,10 +43,7 @@ function calculateTip(){
    return (
        <Fragment>
            <Navbar />
-       <div className="container">
-       <div className="header">
-       <h1>Tip Me!</h1>
-       </div>
+       <div className="container">      
    <form>
        <p>Check Total:</p>
        <input type="number" id="amount" placeholder="Check Amount" maxLength="9" onChange={(e) => setCheckAmount(parseFloat(e.target.value))}/>

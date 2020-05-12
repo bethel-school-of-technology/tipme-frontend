@@ -49,9 +49,9 @@ class ListRestaurants extends React.Component {
   render() {
       return (
         <Fragment>
-        <Navbar />
-          <h3>Add Restaurant</h3>
-          <form onSubmit={this.onSubmit} class="resContainer">
+        <Navbar />          
+          <form onSubmit={this.onSubmit} class="container2">
+              <header><h3>Add Restaurant</h3></header>
               <div className="form-group"> 
                   <label>Name </label>
                   <input  type="text"
@@ -86,52 +86,6 @@ class ListRestaurants extends React.Component {
       )
   }
 }
-
-
-
-
-
-
-// const restaurants = [];
-
-// const ListRestaurants = () => {
-//   const [value, setValue] = React.useState('');
-//   const [list, setList] = React.useState(restaurants);
-
-//   const handleChange = event => {
-//     setValue(event.target.value);
-//   };
-
-//   const handleSubmit = event => {
-//     if (value) {
-//       setList(list.concat(value));
-//     }
-
-//     setValue('');
-
-//     event.preventDefault();
-//   };
-
-    
-       
-//     <div>
-
-//       <form onSubmit={handleSubmit}>
-//         <input type="text" value={value} onChange={handleChange} />
-//         <button type="submit">Add Restaurants</button>
-//       </form>
-
-//       <ul>
-//       {list.map(item => (
-//         <li key={item}>{item}</li>
-//       ))}
-//     </ul>
-    
-//     </div>
-      
-  
-  
-// };
 
 
 export default ListRestaurants;
