@@ -1,12 +1,12 @@
- import React from "react";
- import { Link } from 'react-router-dom'
- 
-//import Logo from '../look/Images/logo.png';
+import React from "react";
+import { Link } from 'react-router-dom' 
+import Logo from '../look/image/logo.png';
 import '../look/css/navbar.css';
 
  const NavBar = () => (
-     <nav>
-       <h2>Tip Me!</h2>
+     <nav>  
+       <h2><img alt="logo" src={Logo}/>
+      </h2>           
        <ul className="nav-links">
          <Link to="/">Home</Link>
          <Link to="/restaurant">Restaurant</Link>

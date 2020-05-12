@@ -46,7 +46,7 @@ handleSubmit(e) {
       <Fragment>
        
         <Navbar />
-        <form onSubmit={this.handleSubmit} className="container">
+        <form onSubmit={this.handleSubmit} className="container3">
         <header><h1>Tip Me!</h1></header>
                 <h3>Sign-Up</h3>
                 <h5>Please Register to begin using Tipme</h5>

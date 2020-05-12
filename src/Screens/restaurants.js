@@ -50,7 +50,7 @@ class ListRestaurants extends React.Component {
       return (
         <Fragment>
         <Navbar />          
-          <form onSubmit={this.onSubmit} class="container">
+          <form onSubmit={this.onSubmit} class="container2">
               <header><h3>Add Restaurant</h3></header>
               <div className="form-group"> 
                   <label>Name </label>

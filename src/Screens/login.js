@@ -47,7 +47,7 @@ class Login extends React.Component {
       <Fragment>
         <Navbar />
         
-        <form onSubmit={this.submit} className="container">
+        <form onSubmit={this.submit} className="container1">
           <h2>Please login</h2>
           <label htmlFor="username">Username: </label>
           <input onChange={this.handleChange} type="text" name="username" id="username" /><br />

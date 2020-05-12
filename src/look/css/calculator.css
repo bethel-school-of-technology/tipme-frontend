@@ -3,10 +3,7 @@ body {
     background-repeat: no-repeat;
     
 }
-.header {
-    border-bottom:1px solid  rgba(29, 158, 29, 0.973);
-    font-size: 1.35em;
-}
+
 .container {
     margin: auto;
     margin-top: 25px;
