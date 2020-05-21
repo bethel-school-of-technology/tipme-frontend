@@ -1,8 +1,7 @@
 import React, {Fragment} from 'react';
 import Axios from 'axios';
 import Navbar from '../components/navbar'
-
-// import '../assets/css/login.css'
+import '../look/css/login.css';
 
 class Login extends React.Component {
   constructor(props) {
@@ -48,7 +47,7 @@ class Login extends React.Component {
       <Fragment>
         <Navbar />
         
-        <form onSubmit={this.submit} className="container">
+        <form onSubmit={this.submit} className="container1">
           <h2>Please login</h2>
           <label htmlFor="username">Username: </label>
           <input onChange={this.handleChange} type="text" name="username" id="username" /><br />
